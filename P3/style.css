@@ -1,0 +1,737 @@
+body {
+    /*background-color: rgb(255, 241, 170);*/
+
+    background-color: beige;
+}
+
+.container {
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 110px 70px 70px 100px 100px 150px 150px 100px 100px 70px 70px 110px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 250px 100px;
+    overflow: hidden;
+    /*background-color: rgb(255, 241, 170);*/
+}
+
+.test {
+    border: 1px solid red;
+}
+
+
+/*------------HOME BUTTON---------*/
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.home {
+    grid-column: 6 / 8;
+    grid-row: 1 / 2;
+    position: relative;
+    background-image: url(svg/title.svg);
+    width: 150px;
+    height: 75px;
+    left: 75px;
+    top: 25px;
+
+}
+
+.home a {
+    opacity: 0;
+    content: "";
+
+}
+
+.home:hover {
+    transform: scale(1.025);
+}
+
+.home h1 {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'futura', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+    top: px;
+}
+
+
+/*------------NAVIGATION BAR---------*/
+.navBar {
+    position: relative;
+    grid-row: 2 / 3;
+    grid-column: 2 / 12;
+}
+
+.navBar a {
+
+    font-size: 30px;
+    font-family: 'futura', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    color: black;
+    margin: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.about {
+    background-image: url(svg/block1.svg);
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    z-index: 0;
+}
+
+.about a {
+    top: 15px;
+    left: 20px;
+}
+
+.artists {
+    background-image: url(svg/block2.svg);
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    left: 195px;
+    z-index: 0;
+}
+
+.artists a {
+    top: 15px;
+    left: 77px;
+
+}
+
+.stream {
+    background-image: url(svg/block3.svg);
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    left: 485px;
+    z-index: 0;
+}
+
+.stream a {
+    top: 15px;
+    left: 30px;
+}
+
+.schedule {
+    background-image: url(svg/block4.svg);
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    left: 731px;
+    z-index: 0;
+}
+
+.schedule a {
+    top: 15px;
+    left: 45px;
+}
+
+.navBar a:link,
+.navBar a:visited {
+    text-decoration: none;
+}
+
+.navBar a:active {}
+
+.about:hover {
+    transform: scale(1.1);
+}
+
+.artists:hover {
+    transform: scale(1.1);
+}
+
+.stream:hover {
+    transform: scale(1.1);
+}
+
+.schedule:hover {
+    transform: scale(1.1);
+}
+
+
+/*------------BODY STUFF---------*/
+.footer {
+    grid-column: 1 / 13;
+    grid-row: 12 / 13;
+    background-color: black;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: 'futura', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    color: black;
+    margin: 20px;
+}
+
+h4 {
+    font-size: 15px;
+    font-family: 'futura', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    color: black;
+    margin: 8px;
+}
+
+.info h2 {
+    font-size: 24px;
+    font-family: 'futura', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    color: black;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+
+
+}
+
+.info h3 {
+    margin: 25px;
+}
+
+/*------------STAND---------*/
+.stand {
+    grid-column: 6 / 8;
+    grid-row: 7 / 8;
+    position: relative;
+
+}
+
+.stand1 {
+    position: absolute;
+    border-left: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    border-top: 1px solid darkseagreen;
+    width: 100px;
+    height: 50px;
+    left: 100px;
+    top: 50px;
+}
+
+.stand1:before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    width: 10px;
+    height: 50px;
+    left: -1px;
+    top: 50px;
+}
+
+.stand1:after {
+    position: absolute;
+    content: "";
+    border-left: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    width: 10px;
+    height: 50px;
+    left: 89px;
+    top: 50px;
+}
+
+.stand2 {
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid darkseagreen;
+    width: 80px;
+    height: 50px;
+    left: 111px;
+    top: 50px;
+}
+
+.stand2:before {
+    position: absolute;
+    content: "";
+    border: 1px solid darkseagreen;
+    width: 70px;
+    height: 28px;
+    left: 4px;
+    top: 10px;
+}
+
+.stand2:after {
+    position: absolute;
+    content: "";
+    border: 1px solid darkseagreen;
+    width: 6px;
+    height: 6px;
+    left: 37px;
+    top: 21px;
+    border-radius: 15px;
+}
+
+.stand3 {
+    position: absolute;
+    content: "";
+    border-top: 1px solid darkseagreen;
+    width: 102px;
+    height: 6px;
+    left: 100px;
+    top: 43px;
+}
+
+.stand3:before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    border-top: 1px solid darkseagreen;
+    width: 6px;
+    height: 6px;
+    left: -7px;
+    top: -1px;
+    border-radius: 0px 0px 0px 20px;
+}
+
+.stand3:after {
+    position: absolute;
+    content: "";
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    border-top: 1px solid darkseagreen;
+    width: 6px;
+    height: 6px;
+    left: 102px;
+    top: -1px;
+    border-radius: 0px 0px 20px 0px;
+}
+
+
+/*------------DRAWER---------*/
+.chair {
+    grid-column: 6 / 8;
+    grid-row: 9 / 10;
+    position: relative;
+
+}
+
+.chair1 {
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 80px;
+    height: 12px;
+    left: 110px;
+    top: 100px;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.chair1:before {
+    content: "";
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 10px;
+    height: 55px;
+    left: 4px;
+    top: 12px;
+}
+
+.chair1:after {
+    content: "";
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 10px;
+    height: 55px;
+    left: 64px;
+    top: 12px;
+}
+
+.chair2 {
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 66px;
+    height: 16px;
+    left: 117px;
+    top: 40px;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.chair2:before {
+    content: "";
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 6px;
+    height: 42px;
+    top: 16px;
+    left: 4px;
+}
+
+.chair2:after {
+    content: "";
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 6px;
+    height: 42px;
+    top: 16px;
+    left: 53px;
+}
+
+.chair3 {
+    content: "";
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 6px;
+    height: 42px;
+    top: 57px;
+    left: 138px;
+}
+
+.chair3:before {
+    content: "";
+    position: absolute;
+    border: 1px solid darkseagreen;
+    width: 6px;
+    height: 42px;
+    top: -1px;
+    left: 16px;
+}
+
+
+/*------------DRAWER---------*/
+.drawer {
+    grid-column: 6 / 8;
+    grid-row: 11 / 12;
+    position: relative;
+
+}
+
+.drawer1 {
+    position: absolute;
+    border-left: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    border-top: 1px solid darkseagreen;
+    width: 100px;
+    height: 90px;
+    left: 100px;
+    top: 50px;
+}
+
+.drawer1:before {
+    position: absolute;
+    content: "";
+    border-left: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    width: 10px;
+    height: 10px;
+    left: -1px;
+    top: 90px;
+}
+
+.drawer1:after {
+    position: absolute;
+    content: "";
+    border-left: 1px solid darkseagreen;
+    border-right: 1px solid darkseagreen;
+    border-bottom: 1px solid darkseagreen;
+    width: 10px;
+    height: 10px;
+    left: 89px;
+    top: 90px;
+}
+
+.drawer2 {
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid darkseagreen;
+    width: 80px;
+    height: 10px;
+    left: 111px;
+    top: 130px;
+}
+
+.drawer2:before {
+    position: absolute;
+    content: "";
+    border: 1px solid darkseagreen;
+    width: 78px;
+    height: 27px;
+    left: 0px;
+    top: -30px;
+}
+
+.drawer2:after {
+    position: absolute;
+    content: "";
+    border: 1px solid darkseagreen;
+    width: 78px;
+    height: 27px;
+    left: 0px;
+    top: -68px;
+}
+
+.drawer3 {
+    position: absolute;
+    content: "";
+    border: 1px solid darkseagreen;
+    width: 6px;
+    height: 6px;
+    left: 148px;
+    top: 110px;
+    border-radius: 15px;
+}
+
+.drawer3:before {
+    position: absolute;
+    content: "";
+    border: 1px solid darkseagreen;
+    width: 6px;
+    height: 6px;
+    left: -1px;
+    top: -39px;
+    border-radius: 15px;
+}
+
+.drawer3:after {
+    position: absolute;
+    content: "";
+    border: 1px solid darkseagreen;
+    width: 112px;
+    height: 6px;
+    left: -54px;
+    top: -68px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+
+
+
+
+
+
+
+
+/*------------HEADER---------*/
+.headPic {
+    grid-column: 2 / 12;
+    grid-row: 3 / 5;
+    position: relative;
+    color: darkseagreen;
+}
+
+
+.headPic1 {
+    outline: 1px solid;
+    position: absolute;
+    top: 1px;
+    width: 980px;
+    height: 200px;
+
+}
+
+.headPic2 {
+    outline: 1px solid;
+    left: 5px;
+    top: 6px;
+    position: absolute;
+    width: 970px;
+    height: 190px;
+
+}
+
+.headPic3 {
+    outline: 1px solid;
+    left: 20px;
+    top: 21px;
+    position: absolute;
+    width: 940px;
+    height: 160px;
+
+
+}
+
+.header {
+    position: relative;
+    font-size: 50px;
+    font-family: 'futura', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    color: black;
+    margin: 10px;
+    top: 35px;
+}
+
+.headPic4 {
+    content: "";
+    display: block;
+    border-left: 1px solid darkseagreen;
+    position: absolute;
+    width: 20px;
+    height: 21px;
+    top: -4px;
+    left: 9px;
+    transform: rotate(-45deg);
+}
+
+.headPic5 {
+    content: "";
+    display: block;
+    border-left: 1px solid darkseagreen;
+    position: absolute;
+    width: 20px;
+    height: 21px;
+    top: 185px;
+    left: 9px;
+    transform: rotate(45deg);
+}
+
+.headPic6 {
+    content: "";
+    display: block;
+    border-right: 1px solid darkseagreen;
+    position: absolute;
+    width: 20px;
+    height: 21px;
+    top: 185px;
+    left: 950px;
+    transform: rotate(-45deg);
+}
+
+.headPic7 {
+    content: "";
+    display: block;
+    border-left: 1px solid darkseagreen;
+    position: absolute;
+    width: 20px;
+    height: 21px;
+    top: 10px;
+    left: 964px;
+    transform: rotate(45deg);
+}
+
+/*------------FOOTER---------*/
+.footer {
+    grid-column: 1 / 13;
+    grid-row: 12 / 13;
+    background-color: black;
+    position: relative;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.footerHome a {
+    opacity: 0;
+    content: "";
+    color: white;
+
+}
+
+.footerHome {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'futura', sans-serif;
+    font-weight: 700;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    top: -15px;
+}
+
+.footerTitle {
+    background-image: url(svg/title2.svg);
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    top: 15px;
+    left: 25px;
+
+
+}
+
+.footer a {
+
+    font-size: 15px;
+    font-family: 'futura', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    color: beige;
+    margin: 10px;
+}
+
+.footerAbout {
+    position: absolute;
+    top: 15px;
+    left: 300px;
+    width: 100px;
+    text-align: center;
+}
+
+.footerArtists {
+    position: absolute;
+    top: 15px;
+    left: 450px;
+    width: 100px;
+    text-align: center;
+
+}
+
+.footerStream {
+    position: absolute;
+    top: 15px;
+    left: 600px;
+    width: 100px;
+    text-align: center;
+}
+
+.footerSchedule {
+    position: absolute;
+    top: 15px;
+    left: 750px;
+    width: 100px;
+    text-align: center;
+}
+
+.navBar a:link,
+.navBar a:visited {
+    text-decoration: none;
+}
+
+.navBar a:active {}
+
+.footerAbout:hover {
+    transform: scale(1.1);
+}
+
+.footerArtists:hover {
+    transform: scale(1.1);
+}
+
+.footerStream:hover {
+    transform: scale(1.1);
+}
+
+.footerSchedule:hover {
+    transform: scale(1.1);
+}
+
+.copyright {
+    position: absolute;
+    font-size: 15px;
+    font-family: 'futura', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    color: beige;
+    margin: 10px;
+    top: 30px;
+    right: 40px;
+}

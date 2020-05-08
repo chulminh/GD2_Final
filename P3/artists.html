@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Against the Grain</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:300,400,500|Lato:300,700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+
+    <style>
+        .container {
+            display: grid;
+            width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: 110px 40px 100px 100px 100px 150px 150px 100px 100px 100px 40px 110px;
+            grid-template-rows: 100px 100px 100px 100px 100px 300px 250px 300px 250px 300px 250px 100px;
+            overflow: hidden;
+            /*background-color: rgb(255, 241, 170);*/
+        }
+
+        .headPic3 {
+            background-image: url(svg/pic2.svg);
+        }
+
+
+        .frame {
+            outline: 1px solid darkseagreen;
+            position: absolute;
+            width: 480px;
+            height: 255px;
+            top: 5px;
+            left: 5px;
+        }
+
+        .frame1 {
+            border: 1px solid darkseagreen;
+            position: absolute;
+            width: 488px;
+            height: 263px;
+            top: 0px;
+        }
+
+        .frame2 {
+            content: "";
+            display: block;
+            border-left: 1px solid darkseagreen;
+            position: absolute;
+            width: 20px;
+            height: 21px;
+            top: -5px;
+            left: 9px;
+            transform: rotate(-45deg);
+        }
+
+        .frame3 {
+            content: "";
+            display: block;
+            border-left: 1px solid darkseagreen;
+            position: absolute;
+            width: 20px;
+            height: 21px;
+            top: 249px;
+            left: 9px;
+            transform: rotate(45deg);
+        }
+
+        .frame4 {
+            content: "";
+            display: block;
+            border-right: 1px solid darkseagreen;
+            position: absolute;
+            width: 20px;
+            height: 21px;
+            top: 249px;
+            left: 460px;
+            transform: rotate(-45deg);
+        }
+
+        .frame5 {
+            content: "";
+            display: block;
+            border-left: 1px solid darkseagreen;
+            position: absolute;
+            width: 20px;
+            height: 21px;
+            top: 9px;
+            left: 474px;
+            transform: rotate(45deg);
+        }
+
+
+        .GRP {
+            grid-column: 2 / 7;
+            grid-row: 6 / 7;
+            position: relative;
+
+
+        }
+
+        .GRP1 {
+            width: 450px;
+            outline: 1px solid darkseagreen;
+            margin: 20px;
+            position: relative;
+        }
+
+        .GRPInfo {
+            grid-column: 7 / 12;
+            grid-row: 6 / 7;
+            position: relative;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .GRPInfo .blank1 {
+            position: absolute;
+            z-index: 0;
+            background-image: url(svg/blank1.svg);
+            height: 40px;
+            width: 470px;
+            left: 15px;
+            top: 5px;
+        }
+
+        .GRPInfo .blank2 {
+            position: absolute;
+            z-index: 0;
+            background-image: url(svg/blank2.svg);
+            height: 40px;
+            width: 470px;
+            left: 15px;
+            top: 220px;
+        }
+
+        .GRPInfo .more {
+            position: relative;
+            height: 40px;
+            width: 470px;
+            top: 17px;
+            padding-top: 4px;
+
+        }
+
+
+
+        .K {
+            grid-column: 7 / 12;
+            grid-row: 8 / 9;
+            position: relative;
+        }
+
+
+        .K1 {
+            width: 450px;
+            outline: 1px solid darkseagreen;
+            margin: 20px;
+            position: absolute;
+            right: 0px;
+        }
+
+        .KInfo {
+            grid-column: 2 / 7;
+            grid-row: 8 / 9;
+            position: relative;
+            padding-left: 12px;
+            padding-right: 15px;
+            margin-top: 5px;
+
+        }
+
+        .KInfo .blank1 {
+            position: absolute;
+            z-index: 0;
+            background-image: url(svg/blank4.svg);
+            height: 40px;
+            width: 470px;
+            right: 9px;
+            top: 5px;
+        }
+
+        .KInfo .blank2 {
+            position: absolute;
+            z-index: 0;
+            background-image: url(svg/blank3.svg);
+            height: 40px;
+            width: 470px;
+            right: 15px;
+            top: 220px;
+        }
+
+        .KInfo .more {
+            position: relative;
+            height: 40px;
+            width: 470px;
+            top: -4px;
+            padding-top: 4px;
+
+        }
+
+
+        .AP {
+            grid-column: 2 / 7;
+            grid-row: 10 / 11;
+            position: relative;
+        }
+
+        .AP1 {
+            position: absolute;
+            width: 450px;
+            outline: 1px solid darkseagreen;
+            margin: 20px;
+        }
+
+        .APInfo {
+
+            grid-column: 7 / 12;
+            grid-row: 10 / 11;
+            position: relative;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .APInfo .blank1 {
+            position: absolute;
+            z-index: 0;
+            background-image: url(svg/blank1.svg);
+            height: 40px;
+            width: 470px;
+            left: 15px;
+            top: 5px;
+            transform: rotate(180deg);
+        }
+
+        .APInfo .blank2 {
+            position: absolute;
+            z-index: 0;
+            background-image: url(svg/blank3.svg);
+            height: 40px;
+            width: 470px;
+            left: 15px;
+            top: 220px;
+            transform: rotate(180deg);
+        }
+
+        .APInfo .more {
+            position: relative;
+            height: 40px;
+            width: 470px;
+            top: 36px;
+            padding-top: 4px;
+
+        }
+
+        .more a {
+            color: black;
+            font-size: 20px;
+        }
+
+        .more:hover {
+            transform: scale(1.025);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="home">
+            <h1><a href="index.html">AGAINST THE GRAIN</a></h1>
+        </div>
+
+        <div class="navBar ">
+            <h2 class="about">
+                <a href="about.html">ABOUT</a>
+            </h2>
+            <h2 class="artists">
+                <div><a href="artists.html">ARTISTS</a></div>
+
+            </h2>
+            <h2 class="stream">
+                <a href="stream.html">STREAM</a>
+            </h2>
+            <h2 class="schedule">
+                <a href="schedule.html">SCHEDULE</a>
+            </h2>
+
+        </div>
+
+        <div class="headPic">
+            <div class="headPic1"></div>
+            <div class="headPic2"></div>
+            <div class="headPic3">
+                <div class="header">ARTISTS</div>
+
+
+            </div>
+            <div class="headPic4"></div>
+            <div class="headPic5"></div>
+            <div class="headPic6"></div>
+            <div class="headPic7"></div>
+
+        </div>
+
+
+        <!--------------------GREENRIVERPROJECT-------------------->
+        <div class="GRP"><img class="GRP1" src="images/GRP1.jpg">
+            <div class="frame "></div>
+            <div class="frame1 "></div>
+            <div class="frame2 "></div>
+            <div class="frame3 "></div>
+            <div class="frame4 "></div>
+            <div class="frame5 "></div>
+        </div>
+
+        <div class="GRPInfo info">
+            <div class="blank1"></div>
+            <h2> GREEN RIVER PROJECT</h2>
+            <h4>Founded in 2017 by Aaron Aujla and Benjamin Bloomstein, Green River Project LLC’s research-based approach to building furniture and interiors has been shaped by 10 years of studio practice as artists in New York City. Along with private commissions for residential interiors, every year Green River Project LLC produces four collections of furniture and sculptural objects centered around a unique narrative.</h4>
+            <div class="blank2"></div>
+            <h2 class="more"><a href="https://www.greenriverprojectllc.com/" target="_blank">LEARN MORE</a></h2>
+        </div>
+
+        <!--------------------STAND-------------------->
+        <div class="stand">
+            <div class="stand1"></div>
+            <div class="stand2"></div>
+            <div class="stand3"></div>
+        </div>
+
+
+        <!--------------------KALON-------------------->
+        <div class="K "><img class="K1" src="images/K1.jpg">
+            <div class="frame "></div>
+            <div class="frame1 "></div>
+            <div class="frame2 "></div>
+            <div class="frame3 "></div>
+            <div class="frame4 "></div>
+            <div class="frame5 "></div>
+        </div>
+
+        <div class="KInfo info">
+            <div class="blank1"></div>
+            <h2>KALON</h2>
+            <h4>Since the beginning, Kalon has held a deep commitment to sustainable, US based production, and each piece is made by a small team of highly skilled traditional craftspeople in New England using timber sourced from local, sustainably managed forests and the highest quality sustainable finishes and materials. Kalon’s intent is that the user will keep the product for a lifetime and that the piece will adapt to the user’s ever-changing needs and tastes.</h4>
+            <div class="blank2"></div>
+            <h2 class="more"><a href="https://kalonstudios.com/about/" target="_blank">LEARN MORE</a></h2>
+        </div>
+
+        <!--------------------CHAIR-------------------->
+        <div class="chair">
+            <div class="chair1"></div>
+            <div class="chair2"></div>
+            <div class="chair3"></div>
+        </div>
+
+
+        <!--------------------AARONPORITZ-------------------->
+        <div class="AP">
+            <img class="AP1" src="images/AP1.jpg">
+            <div class="frame "></div>
+            <div class="frame1 "></div>
+            <div class="frame2 "></div>
+            <div class="frame3 "></div>
+            <div class="frame4 "></div>
+            <div class="frame5 "></div>
+        </div>
+
+        <div class="APInfo info">
+            <div class="blank1"></div>
+            <h2>PORITZ AND STUDIO</h2>
+            <h4>Aaron Poritz uses exquisite materials blended with flawless fabrication. His work highlights the natural patterns and texture found in wood, stone and ceramics. The furniture has a timeless quality; though contemporary, it evokes nostalgia. His sculpture is unique, playful and mysterious, inspired by ancient functional forms. </h4>
+            <div class="blank2"></div>
+            <h2 class="more"><a href="https://www.poritzandstudio.com/about" target="_blank">LEARN MORE</a></h2>
+        </div>
+
+        <!--------------------DRAWER-------------------->
+        <div class="drawer">
+            <div class="drawer1"></div>
+            <div class="drawer2"></div>
+            <div class="drawer3"></div>
+        </div>
+
+
+        <!--------------FOOTER----------------->
+        <div class="footer">
+            <div class="footerTitle">
+                <h1 class="footerHome"><a href="index.html">AGAINST <br>THE GRAIN</a></h1>
+            </div>
+            <h2 class="footerAbout ">
+                <a href="about.html">ABOUT</a>
+            </h2>
+            <h2 class="footerArtists">
+                <a href="artists.html">ARTISTS</a>
+            </h2>
+            <h2 class="footerStream">
+                <a href="stream.html">STREAM</a>
+            </h2>
+            <h2 class="footerSchedule">
+                <a href="schedule.html">SCHEDULE</a>
+            </h2>
+            <h2 class="copyright">© all rights reserved 2020</h2>
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Against the Grain</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:300,400,500|Lato:300,700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .container {
+            display: grid;
+            width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: 110px 40px 100px 100px 100px 150px 150px 100px 100px 100px 40px 110px;
+            grid-template-rows: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+            overflow: hidden;
+            /*background-color: rgb(255, 241, 170);*/
+        }
+
+        .rings {
+            position: relative;
+            grid-column: 5 / 9;
+            grid-row: 2/ 8;
+        }
+
+        .rings a {
+            font-size: 24px;
+            font-family: 'futura', sans-serif;
+            font-weight: 700;
+            margin: 0;
+            text-align: left;
+            color: black;
+            margin: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /*--------------------ring1----------------------*/
+        #rings1 {
+            background-image: url(rings/rings1.svg);
+            width: 250px;
+            height: 70px;
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box1 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-right: 1px solid darkseagreen;
+            border-bottom: 1px solid darkseagreen;
+            width: 170px;
+            height: 58px;
+            top: 11px;
+            left: 79px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .rings:hover #rings1 {
+            left: -5px;
+            top: -40px;
+        }
+
+        .rings:hover .box1 {
+            opacity: 1;
+        }
+
+        /*--------------------ring2----------------------*/
+        #rings2 {
+            background-image: url(rings/rings2.svg);
+            width: 250px;
+            height: 70px;
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 250px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box2 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-left: 1px solid darkseagreen;
+            border-bottom: 1px solid darkseagreen;
+            width: 174px;
+            height: 58px;
+            top: 11px;
+            left: 0px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .rings:hover #rings2 {
+            left: 267px;
+            top: -40px;
+        }
+
+        .rings:hover .box2 {
+            opacity: 1;
+        }
+
+        /*--------------------ring3----------------------*/
+        #rings3 {
+            background-image: url(rings/rings3.svg);
+            width: 260px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 70px;
+            left: 0px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box3 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-right: 1px solid darkseagreen;
+            border-bottom: 1px solid darkseagreen;
+            width: 239px;
+            height: 80px;
+            top: 0px;
+            left: 21px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .box3:before {
+            position: absolute;
+            display: block;
+            content: "";
+            border-top: 1px solid darkseagreen;
+            width: 183px;
+            height: 80px;
+            top: 0px;
+            left: 56px;
+        }
+
+        .box3 a {
+            left: 75px;
+            top: 25px;
+        }
+
+        .rings:hover #rings3 {
+            left: -20px;
+            top: 50px;
+        }
+
+        .rings:hover .box3 {
+            opacity: 1;
+        }
+
+        #rings3:hover {
+            transform: scale(1.1);
+        }
+
+
+        /*--------------------ring4----------------------*/
+        #rings4 {
+            background-image: url(rings/rings4.svg);
+            width: 240px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 70px;
+            left: 260px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box4 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-left: 1px solid darkseagreen;
+            border-bottom: 1px solid darkseagreen;
+            width: 214px;
+            height: 80px;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .box4:before {
+            position: absolute;
+            display: block;
+            content: "";
+            border-top: 1px solid darkseagreen;
+            width: 165px;
+            height: 80px;
+            top: 0px;
+            left: 0px;
+        }
+
+        .box4 a {
+            left: 30px;
+            top: 25px;
+        }
+
+        .rings:hover #rings4 {
+            left: 280px;
+            top: 50px;
+        }
+
+        .rings:hover .box4 {
+            opacity: 1;
+        }
+
+        #rings4:hover {
+            transform: scale(1.1);
+        }
+
+
+        /*--------------------ring5----------------------*/
+        #rings5 {
+            background-image: url(rings/rings5.svg);
+            width: 50px;
+            height: 170px;
+            display: block;
+            position: absolute;
+            top: 150px;
+            left: 0px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box5 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-right: 1px solid darkseagreen;
+            border-bottom: 1px solid darkseagreen;
+            width: 33px;
+            height: 170px;
+            top: 0px;
+            left: 17px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .box5:before {
+            position: absolute;
+            display: block;
+            content: "";
+            border-top: 1px solid darkseagreen;
+            width: 30px;
+            height: 170px;
+            top: 0px;
+            left: 3px;
+        }
+
+        .rings:hover #rings5 {
+            left: -30px;
+            top: 150px;
+        }
+
+        .rings:hover .box5 {
+            opacity: 1;
+        }
+
+        /*--------------------ring6----------------------*/
+        #rings6 {
+            background-image: url(rings/rings6.svg);
+            width: 400px;
+            height: 170px;
+            display: block;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+        }
+
+        .box6 {
+            position: absolute;
+            display: block;
+            content: "";
+            border: 1px solid darkseagreen;
+            width: 398px;
+            height: 168px;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .rings:hover .box6 {
+            opacity: 1;
+        }
+
+        .rings:hover {
+            transform: scale(1.025);
+        }
+
+        .title2 {
+            font-size: 38px;
+            font-family: 'futura', sans-serif;
+            font-weight: 700;
+            position: absolute;
+            margin: 0;
+            text-align: center;
+            width: 250px;
+            color: black;
+            top: 15px;
+            left: 48px;
+            z-index: 1;
+            background-image: url(svg/title.svg);
+            content: "";
+            display: block;
+            height: 150px;
+            width: 300px;
+
+        }
+
+        /*--------------------ring7----------------------*/
+        #rings7 {
+            background-image: url(rings/rings7.svg);
+            width: 50px;
+            height: 170px;
+            display: block;
+            position: absolute;
+            top: 150px;
+            left: 450px;
+            transition-property: left;
+            transition-duration: 1s;
+        }
+
+        .box7 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-left: 1px solid darkseagreen;
+            border-bottom: 1px solid darkseagreen;
+            width: 35px;
+            height: 170px;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .box7:before {
+            position: absolute;
+            display: block;
+            content: "";
+            border-top: 1px solid darkseagreen;
+            width: 23px;
+            height: 170px;
+            top: 0px;
+            left: 0px;
+        }
+
+        .rings:hover #rings7 {
+            left: 480px;
+        }
+
+        .rings:hover .box7 {
+            opacity: 1;
+        }
+
+        /*--------------------ring8----------------------*/
+        #rings8 {
+            background-image: url(rings/rings8.svg);
+            width: 230px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 320px;
+            left: 0px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box8 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-right: 1px solid darkseagreen;
+            border-top: 1px solid darkseagreen;
+            width: 211px;
+            height: 80px;
+            top: 0px;
+            right: 0px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .box8:before {
+            position: absolute;
+            display: block;
+            content: "";
+            border-bottom: 1px solid darkseagreen;
+            width: 156px;
+            height: 79px;
+            top: 0px;
+            right: 0px;
+        }
+
+        .box8 a {
+            left: 60px;
+            top: 23px;
+        }
+
+        .rings:hover #rings8 {
+            left: -30px;
+            top: 340px;
+        }
+
+        .rings:hover .box8 {
+            opacity: 1;
+        }
+
+        #rings8:hover {
+            transform: scale(1.1);
+        }
+
+        /*--------------------ring9----------------------*/
+        #rings9 {
+            background-image: url(rings/rings9.svg);
+            width: 270px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 320px;
+            left: 230px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box9 {
+            position: absolute;
+            display: block;
+            content: "";
+            border-left: 1px solid darkseagreen;
+            border-top: 1px solid darkseagreen;
+            width: 254px;
+            height: 80px;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 1s;
+        }
+
+        .box9:before {
+            position: absolute;
+            display: block;
+            content: "";
+            border-bottom: 1px solid darkseagreen;
+            width: 195px;
+            height: 79px;
+            top: 0px;
+            left: 0px;
+        }
+
+        .box9 a {
+            left: 30px;
+            top: 23px;
+        }
+
+        .rings:hover #rings9 {
+            left: 250px;
+            top: 340px;
+        }
+
+        .rings:hover .box9 {
+            opacity: 1;
+        }
+
+        #rings9:hover {
+            transform: scale(1.1);
+        }
+
+        /*--------------------ring10----------------------*/
+        #rings10 {
+            background-image: url(rings/rings10.svg);
+            width: 260px;
+            height: 70px;
+            display: block;
+            position: absolute;
+            top: 400px;
+            left: 0px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box10 {
+            position: absolute;
+            content: "";
+            display: block;
+            border-right: 1px solid darkseagreen;
+            border-top: 1px solid darkseagreen;
+            opacity: 0;
+            height: 60px;
+            width: 187px;
+            right: 0px;
+            transition-property: opacity;
+            transition-duration: 1s;
+
+        }
+
+        .rings:hover #rings10 {
+            left: -20px;
+            top: 440px;
+        }
+
+        .rings:hover .box10 {
+            opacity: 1;
+        }
+
+        /*--------------------ring11----------------------*/
+        #rings11 {
+            background-image: url(rings/rings11.svg);
+            width: 240px;
+            height: 70px;
+            display: block;
+            position: absolute;
+            top: 400px;
+            left: 260px;
+            transition-property: left, top;
+            transition-duration: 1s;
+        }
+
+        .box11 {
+            position: absolute;
+            content: "";
+            display: block;
+            border-left: 1px solid darkseagreen;
+            border-top: 1px solid darkseagreen;
+            opacity: 0;
+            height: 60px;
+            width: 164px;
+            left: 0px;
+            transition-property: opacity;
+            transition-duration: 1s;
+
+        }
+
+        .rings:hover #rings11 {
+            left: 270px;
+            top: 440px;
+        }
+
+        .rings:hover .box11 {
+            opacity: 1;
+        }
+
+
+        .footer {
+            grid-row: 11 / 12;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="container">
+
+       
+       <!--------------lANDING----------------->
+        <div class="rings ">
+
+            <div id="rings1">
+                <div class="box1">
+
+                </div>
+            </div>
+            <div id="rings2">
+                <div class="box2"></div>
+            </div>
+            <div id="rings3">
+                <div class="box3">
+                    <a href="about.html">ABOUT</a>
+                </div>
+
+            </div>
+            <div id="rings4">
+                <div class="box4">
+                    <a href="artists.html">ARTISTS</a>
+                </div>
+
+            </div>
+            <div id="rings5">
+                <div class="box5"></div>
+            </div>
+            <div id="rings6">
+                <div class="box6"></div>
+                <div class="title2"></div>
+            </div>
+            <div id="rings7">
+                <div class="box7"></div>
+            </div>
+            <div id="rings8">
+                <div class="box8">
+                    <a href="stream.html">STREAM</a>
+                </div>
+
+            </div>
+            <div id="rings9">
+                <div class="box9">
+                    <a href="schedule.html">SCHEDULE</a>
+                </div>
+
+            </div>
+            <div id="rings10">
+                <div class="box10"></div>
+            </div>
+            <div id="rings11">
+                <div class="box11"></div>
+            </div>
+
+        </div>
+<!--------------FOOTER----------------->
+        <div class="footer">
+            <div class="footerTitle">
+                <h1 class="footerHome"><a href="index.html">AGAINST <br>THE GRAIN</a></h1>
+            </div>
+            <h2 class="footerAbout ">
+                <a href="about.html">ABOUT</a>
+            </h2>
+            <h2 class="footerArtists">
+                <a href="artists.html">ARTISTS</a>
+            </h2>
+            <h2 class="footerStream">
+                <a href="stream.html">STREAM</a>
+            </h2>
+            <h2 class="footerSchedule">
+                <a href="schedule.html">SCHEDULE</a>
+            </h2>
+            <h2 class="copyright">© all rights reserved 2020</h2>
+        </div>
+
+
+    </main>
+
+</body></html>
